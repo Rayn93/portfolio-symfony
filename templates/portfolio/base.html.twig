@@ -1,20 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ app.request.getLocale() }}">
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block pageTitle %}Welcome!{% endblock %}</title>
+        <meta name = "description" content ={% block pageDesc %}{% endblock %}/>
+        <meta name ="keywords" content = "portfolio webdevelopera, programista php, tworzenie stron internetowych, sklep internetowy, strona www, serwis internetowy, portfolio"/>
+        <meta name="author" content="Robert Saternus">
+
+        <link href="http://fonts.googleapis.com/css?family=Lato:400,900&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="{{ asset('build/img/favicon.ico') }}" type="image/icon">
+
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
 
+    </head>
+    <body>
+        {% block pageBody %}{% endblock %}
+
+        <footer>&copy; {% trans %}Projekt i realizacja{% endtrans %}: Robert Saternus {{ "now"|date("Y") }}</footer>
+
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
-    </head>
-    <body>
-    <h1>Your lucky number is {{ number }}</h1>
-        {% block body %}{% endblock %}
     </body>
 </html>
