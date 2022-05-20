@@ -12,15 +12,14 @@ cd portfolio-symfony/
 1. Install NVM:
 
 ```
-   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh
-   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
    source ~/.bashrc
 ```
 
 3. Install nodejs and nmp
 ```
-    nvm install v14.19.0
-    nvm use v14.19.0
+    nvm install v16.13.0
+    nvm use v16.13.0
 ```
 
 3. Install yarn

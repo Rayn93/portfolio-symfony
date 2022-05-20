@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 final class PortfolioController extends AbstractController
 {
     #[Route(path: '/', name: 'portfolio_homepage', methods: ['GET'])]
-    public function number(): Response
+    public function index(): Response
     {
         $number = random_int(0, 100);
 
