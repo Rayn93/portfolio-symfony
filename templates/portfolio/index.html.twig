@@ -1,0 +1,315 @@
+{% extends "portfolio/base.html.twig" %}
+
+{% block pageTitle %}Robert Saternus - {% trans %}portfolio webdevelopera{% endtrans %}{% endblock %}
+
+{% block pageDesc %}"{% trans %}Portfolio freelancera - webdevelopera. Tworzenie stron internetowych, wizytówek, portfolia, sklepy internetowe, blogi, aplikacje. Potrzebujesz stworzyć wyjątkową stronę, serwis lub sklep internetowy. Zajrzyj tutaj!{% endtrans %}"{% endblock %}
+
+
+{% block pageBody %}
+<body class="home">
+
+<div class="cover"></div>
+
+    <header id="home">
+
+{#        {% include "PortfolioBundle::sticky-header.html.twig" %}#}
+
+        <div id="imie">
+
+            <h1>Robert Saternus <br /><strong>{% trans %}<span>portfolio</span> webdevelopera{% endtrans %}</strong></h1>
+
+            <a class="button scroll" href="#projekty"> {% trans %}ZOBACZ PROJEKTY{% endtrans %}  </a>
+        </div>
+
+    </header>
+
+
+    <section id="kim">
+        <div class="container">
+            <div class="row">
+                <div class="omnie col-md-6 col-xs-12">
+                    <h2>{% trans %}Kilka słów <span>o mnie</span>{% endtrans %}</h2>
+                    <p>{% trans %}<span>Web Developer, programista PHP, geofizyk</span>. Na co dzień freelancer, który tworzy strony i serwisy internetowe, co sprawia mu ogromną radość. Głównie specjalizuje się w technologiach <span>back-end-owych</span> ale HTML, CSS i JS nie jest mu również obce. Od czasu do czasu zajmuje się również prostą grafiką</p> <p>W wolnych chwilach podróżuje po świecie, startuje w triathlonach i uwielbia wszystko co zwiększa poziom adrenaliny.{% endtrans %}</p>
+
+{#                    <a class="button" href="{{ path('portfolio_cv') }}"> {% trans %}Zobacz moje CV{% endtrans %} </a>#}
+                    <a class="button" href="#"> {% trans %}Zobacz moje CV{% endtrans %} </a>
+                </div>
+
+                <div class="col-md-6 col-xs-12">
+                    <img src="{{ asset('build/img/robert2.jpg')}}" alt="Robert Saternus">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="technologie">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="parallax col-xs-12">
+                    <h2>{% trans %}<span>Technologie</span>, z którymi pracuję{% endtrans %}</h2>
+                </div>
+
+                <div id="da-slider" class="da-slider">
+
+
+{#                    {% for technology in technologies %}#}
+{#                        <div class="da-slide">#}
+{#                            <h2>{{ technology.translate().title }}</h2>#}
+{#                            <p>{{ technology.translate().content|raw }}</p>#}
+{#                            <div class="da-img button">#}
+{#                                <img class="img-responsive" src="{{ asset('uploads/technology/' ~ technology.thumbnail )}}" alt="{{ technology.translate().title }}"/>#}
+{#                            </div>#}
+{#                        </div>#}
+
+{#                    {% endfor %}#}
+
+                    <nav class="da-arrows">
+                        <span class="da-arrows-prev"></span>
+                        <span class="da-arrows-next"></span>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projekty">
+        <div class="container">
+            <div class="row">
+                <div class="parallax col-xs-12">
+                    <h2>{% trans %}Moje najnowsze <span>projekty</span>{% endtrans %}</h2>
+                </div>
+
+{#                {% for project in projects %}#}
+
+{#                <div class="row row{{ loop.index }}">#}
+{#                    <div class="col-md-6 computer {{  cycle(["parallax_right", "parallax_left"], loop.index) }} {{ cycle(["col-md-push-6", ""], loop.index) }}">#}
+{#                        <img class="img-responsive" src="{{ asset('uploads/' ~ project.thumbnail)}}" alt="{{ project.translate().title }}"/>#}
+{#                    </div>#}
+
+{#                    <div class="col-md-6 project_desc {{ cycle(["col-md-pull-6", ""], loop.index)}}">#}
+{#                        <h3>{{ project.translate().title }}</h3>#}
+
+{#                        <p>{{ project.translate().content }}</p>#}
+{#                        <ul>#}
+{#                            {% for tag in project.tags %}#}
+{#                                <li><a href="{{ path('portfolio_projects_tags', {'slug': tag.slug}) }}">{{ tag.translate().name }}</a></li>#}
+{#                            {% endfor %}#}
+{#                        </ul>#}
+{#                        <a class="button" href="{{ project.link }}" target="_blank"> {% trans %}Zobacz projekt{% endtrans %} </a>#}
+{#                        {% if (project.readMore is not null) and (app.request.getLocale() == 'pl') %}#}
+{#                            <a class="button" href="{{ project.readMore }}" target="_blank"> Czytaj więcej</a>#}
+{#                        {% endif %}#}
+{#                    </div>#}
+{#                </div>#}
+
+{#                {% if loop.last == false %}#}
+{#                    <div class="separator">#}
+{#                        <div class="mask"></div>#}
+{#                    </div>#}
+{#                {% endif %}#}
+
+{#                {% endfor %}#}
+
+
+{#                <a class="button bigger" href="{{ path('portfolio_projects') }}">{% trans %}Zobacz więcej moich realizacji{% endtrans %}</a>#}
+                <a class="button bigger" href="#">{% trans %}Zobacz więcej moich realizacji{% endtrans %}</a>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+
+        <!-- Testimonials -->
+        <div class="testimonials-container section-container section-container-image-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 testimonials section-description">
+                        <div class="parallax col-xs-12">
+                            <h2>{% trans %}Opinie osób, z którymi <span>współpracuję</span>{% endtrans %} </h2>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 testimonial-list">
+                        <div role="tabpanel">
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+
+{#                                {% for testimonial in testimonials %}#}
+
+{#                                    <div role="tabpanel" class="tab-pane fade in {{ loop.first ? "active" : "" }}" id="tab{{ loop.index }}">#}
+{#                                        <div class="testimonial-image col-md-3">#}
+{#                                            <img class="img-responsive" src="{{ asset('uploads/testimonial-authors/' ~ testimonial.avatar )}}" alt="{{ testimonial.author }}"/>#}
+{#                                            <br />#}
+{#                                            <p class="testimonial-author">{{ testimonial.author }}</p>#}
+{#                                            <p class="company">{{ testimonial.translate().role }} <a class href="{{ testimonial.link }}" target="_blank">{{ testimonial.company }}</a></p>#}
+{#                                        </div>#}
+{#                                        <div class="testimonial-text col-md-9 ">#}
+{#                                            <p class="test-long">{{ testimonial.translate().content }}</p>#}
+{#                                            {% if testimonial.translate().contentShort is not empty %}#}
+{#                                                <p class="test-short">{{ testimonial.translate().contentShort }}</p>#}
+{#                                            {% endif %}#}
+{#                                        </div>#}
+{#                                    </div>#}
+
+{#                                {% endfor %}#}
+
+                            </div>
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+
+{#                                {% for testimonial in testimonials %}#}
+{#                                    <li role="presentation" class="{{ loop.first ? "active" : "" }}">#}
+{#                                        <a href="#tab{{ loop.index }}" aria-controls="tab{{ loop.index }}" role="tab" data-toggle="tab"></a>#}
+{#                                    </li>#}
+{#                                {% endfor %}#}
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    {% if app.request.getLocale() == 'pl' %}
+
+    <section id="blog">
+
+        <div class="container">
+            <div class="row">
+                <div class="parallax col-xs-12">
+                    <h2>Najnowsze <span>artykuły</span></h2>
+                </div>
+
+
+                {% for post in posts|slice(0, 3) %}
+
+                <div class="col-lg-4 col-sm-6 article">
+                    {#{% image 'bundles/portfolio/img/slide1.jpg' %}#}
+                        {#<img class="img-responsive thumbnail" src="{{ asset_url }}" alt="artykuł1">#}
+                    {#{% endimage %}#}
+
+                    <img class="img-responsive thumbnail" src="{{ asset('uploads/blog/' ~ post.thumbnail)}}" alt="{{ post.title }}"/>
+
+                    <div class="parent">
+                        <h3>{{ post.title }}</h3>
+                    </div>
+                    <div class="parent2">
+{#                        <p>{{ post.excerpt|cutText(200, '') }}</p>#}
+                        <p>Lorem ipsum</p>
+                    </div>
+                    <a class="button" href="{{ path('blog_post', {'slug': post.slug}) }}">Czytaj więcej</a>
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+            <a class="button bigger" href="{{ path('blog_list') }}">Zobacz więcej artykułów</a>
+
+        </div>
+    </section>
+
+    <section id="wspolpraca">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-6 col-sm-5 hidden-xs"></div>
+                <div class="col-lg-4 col-md-6 col-sm-7 col-xs-12">
+                    <h2>{% trans %}Zapraszam do współpracy{% endtrans %}</h2>
+                    <p>{% trans %}Jako wolny strzelec, nie muszący opłacać biura czy pracowników, oferuję bardzo konkurencyjne ceny. Specjalizuję się w <span> systemie Wodpress (tworzenie szablonów, pluginów)</span> oraz w <span> tworzeniu aplikacji w Symfony</span>. Wykunuję praktycznie każdy rodzaj stron:<span> wizytówki firm, sklepy internetowe, blogi, portfolia</span> oraz <span>aplikacje webowe.</span> {% endtrans %}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% endif %}
+
+    <section id="kontakt">
+        <div class="container">
+
+            {% for flashMessage in app.session.flashbag.get('success') %}
+            <div class="feedback_good">
+                {{ flashMessage }}
+            </div>
+            {% endfor %}
+
+            {% for flashMessage in app.session.flashbag.get('fail') %}
+                <div class="feedback_bad">
+                    {{ flashMessage }}
+                </div>
+            {% endfor %}
+
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <h2>{% trans %}KONTAKT{% endtrans %}</h2>
+                    <p><span>E-mail:</span> robert.saternus<span>@</span>gmail.com</p>
+                    <p><span>{% trans %}Tel{% endtrans %}:</span> (+48) 791-680-323</p>
+                    <p><span>Skype:</span> roberto93123</p>
+                </div>
+
+                <div class="col-xs-12 col-sm-6">
+
+{#                    <form class="form-horizontal" method="post" action="{{ path('portfolio_main') }}" novalidate>#}
+{#                        <div class="form-group">#}
+{#                            <div class="col-sm-12">#}
+{#                                {{ form_widget(contactForm.name, {'attr': {'class': 'form-control'}}) }}#}
+{#                                {{ form_widget(contactForm.email, {'attr': {'class': 'form-control'}}) }}#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="form-group">#}
+{#                            <div class="col-sm-12">#}
+{#                                {{ form_widget(contactForm.message, {'attr': {'class': 'form-control'}}) }}#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="form-group">#}
+{#                            <div class="col-sm-12">#}
+{#                                {{ form_widget(contactForm.save, {'attr': {'class': 'btn btn-primary'}}) }}#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        {{ form_rest(contactForm) }}#}
+{#                        <input type="hidden" name="checker" value="1" />#}
+{#                    </form>#}
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+    <script>
+        var slide1 = "{{ asset('bundles/portfolio/img/slide1.jpg') }}";
+        var slide2 = "{{ asset('bundles/portfolio/img/slide2.jpg') }}";
+        var slide3 = "{{ asset('bundles/portfolio/img/slide3.jpg') }}";
+        var slide4 = "{{ asset('bundles/portfolio/img/slide4.jpg') }}";
+        var slide5 = "{{ asset('bundles/portfolio/img/slide5.jpg') }}";
+        var testimonialbg = "{{ asset('bundles/portfolio/img/1.jpg') }}";
+    </script>
+
+{#    {% javascripts#}
+{#        'bundles/portfolio/js/jquery-2.1.3.min.js'#}
+{#        'bundles/portfolio/js/jquery-ui.min.js'#}
+{#        'bundles/portfolio/js/bootstrap.min.js'#}
+{#        'bundles/portfolio/js/pace.min.js'#}
+{#        'bundles/portfolio/assets/sliderparallax/js/jquery.cslider.js'#}
+{#        'bundles/portfolio/js/jquery.bgswitcher.js'#}
+{#        'bundles/portfolio/js/jquery.backstretch.min.js'#}
+{#        'bundles/portfolio/js/main_script.js'#}
+{#        'bundles/portfolio/js/home_page_script.js'#}
+{#        output ='assets/js/compiled-main.js'#}
+{#    %}#}
+{#        <script src="{{ asset_url }}"></script>#}
+{#    {% endjavascripts %}#}
+
+{% endblock %}
+

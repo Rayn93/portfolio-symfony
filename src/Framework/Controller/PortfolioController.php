@@ -14,7 +14,7 @@ final class PortfolioController extends AbstractController
     {
         $number = random_int(0, 100);
 
-        return $this->render('portfolio/base.html.twig', [
+        return $this->render('portfolio/index.html.twig', [
             'number' => $number,
         ]);
     }
